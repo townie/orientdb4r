@@ -20,7 +20,8 @@ namespace :db do
   task :setup4test do
     found = true
     begin
-      ::RestClient::Request.new({:url=>"http://#{DB_HOST}:#{DB_PORT}/database/#{DB_NAME}", :method=>:get, :user=>DB_ROOT_USER, :password=>DB_ROOT_PASS}).execute
+      # require 'pry';binding.pry
+      ::RestClient::Request.execute({:url=>"http://#{DB_HOST}:#{DB_PORT}/#{DB_NAME}", :method=>:get, :user=>DB_ROOT_USER, :password=>DB_ROOT_PASS})
     rescue Errno::ECONNREFUSED
       fail "server seems to be closed, not running on #{DB_HOST}:#{DB_PORT}?"
     rescue ::RestClient::Unauthorized
@@ -28,6 +29,7 @@ namespace :db do
       puts 'DB does NOT exist -> create'
       found = false
     rescue ::RestClient::Exception => e
+      # require 'pry';binding.pry
       fail "unexpected failure: #{e}"
     end
 
