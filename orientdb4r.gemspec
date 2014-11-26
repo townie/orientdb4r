@@ -32,6 +32,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency(%q<rest-client>, ["~> 1.7.1"])
   # s.add_dependency(%q<mini>, ["~> 1.7.1"])
-#  s.add_development_dependency(%q<json>, ["~> 1.5.1"])
-
+# #  s.add_development_dependency(%q<json>, ["~> 1.5.1"])
+# gem 'minitest'
+# +  gem 'minitest-colorize', :require => 'minitest'
+# +  gem 'minitest-reporters'
+# +  gem 'minitest_should', :git => 'git@github.com:citrus/minitest_should.git'
 end
