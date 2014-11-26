@@ -1,0 +1,29 @@
+GIT
+  remote: git@github.com:citrus/minitest_should.git
+  revision: 6a91771ac4edad877f72317f1166ce90ba37bd40
+  specs:
+    minitest_should (0.3.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.4.3)
+    builder (3.2.2)
+    minitest (5.4.3)
+    minitest-colorize (0.0.5)
+      minitest (>= 2.0)
+    minitest-reporters (1.0.8)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    ruby-progressbar (1.7.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-colorize
+  minitest-reporters
+  minitest_should!
